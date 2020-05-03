@@ -17,3 +17,8 @@ cc_binary(
     srcs = ["rectangle_histogram.cc"],
 )
 
+cc_binary(
+    name = "maximal_rectangle",
+    srcs = ["maximal_rectangle.cc"],
+)
+
