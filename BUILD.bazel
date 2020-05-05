@@ -22,3 +22,13 @@ cc_binary(
     srcs = ["maximal_rectangle.cc"],
 )
 
+cc_binary(
+    name = "climbing_stairs",
+    srcs = ["climbing_stairs.cc"],
+)
+
+cc_binary(
+    name = "first_bad_version",
+    srcs = ["first_bad_version.cc"],
+)
+
