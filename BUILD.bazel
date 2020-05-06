@@ -36,3 +36,9 @@ cc_binary(
     name = "valid_parentheses",
     srcs = ["valid_parentheses.cc"],
 )
+
+cc_binary(
+    name = "longest_valid_parentheses",
+    srcs = ["longest_valid_parentheses.cc"],
+)
+
