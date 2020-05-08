@@ -42,3 +42,8 @@ cc_binary(
     srcs = ["longest_valid_parentheses.cc"],
 )
 
+cc_binary(
+    name = "valid_palindrome",
+    srcs = ["valid_palindrome.cc"],
+)
+
