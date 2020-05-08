@@ -47,3 +47,8 @@ cc_binary(
     srcs = ["valid_palindrome.cc"],
 )
 
+cc_binary(
+    name = "longest_palindromic_substring",
+    srcs = ["longest_palindromic_substring.cc"],
+)
+
