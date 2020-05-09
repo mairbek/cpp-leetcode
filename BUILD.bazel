@@ -62,3 +62,7 @@ cc_binary(
     srcs = ["clone_graph.cc"],
 )
 
+cc_binary(
+    name = "subarray_sum",
+    srcs = ["subarray_sum.cc"],
+)
