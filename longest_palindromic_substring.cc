@@ -7,8 +7,51 @@ namespace {
 class Solution {
  public:
   std::string longestPalindrome(std::string s) {
-    return brute_force(s);
+    return expand_center(s);
   }
+
+  int check_valid(std::string& s, int i, int j, int* ll, int* rr) {
+    if (s[i] != s[j]) {
+      return 0;
+    }
+    int n = s.length();
+    int l = i, r = j;
+    while(l >= 0 && r <= n - 1) {
+      if (s[l] != s[r]) {
+        break;
+      }
+      *ll = l;
+      *rr = r;
+      l--;
+      r++;
+    }
+    return r - l + 1;
+  }
+
+  std::string expand_center(std::string s) {
+    int n = s.length();
+    int max_len = 0;
+    int ma, mb = 0;
+    for (int i = 0; i < n; i++) {
+      int l, r;
+      int nn = check_valid(s, i, i, &l, &r);
+      if (nn > max_len) {
+        max_len = nn;
+        ma = l;
+        mb = r;
+      }
+      if (i < (n-1)) {
+        int nn = check_valid(s, i, i+1, &l, &r);
+        if (nn > max_len) {
+          max_len = nn;
+          ma = l;
+          mb = r;
+        }
+      }
+    }
+    return s.substr(ma, mb - ma + 1);
+  }
+
 
   std::string brute_force(std::string s) {
     int n = s.length();
@@ -36,7 +79,6 @@ class Solution {
         }
       }
     }
-    std::cout << ma << " " << mb << std::endl;
     return s.substr(ma, mb - ma + 1);
   }
 };
