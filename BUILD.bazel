@@ -66,3 +66,8 @@ cc_binary(
     name = "subarray_sum",
     srcs = ["subarray_sum.cc"],
 )
+
+cc_binary(
+    name = "min_path_sum",
+    srcs = ["min_path_sum.cc"],
+)
