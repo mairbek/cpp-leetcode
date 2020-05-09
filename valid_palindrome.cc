@@ -18,11 +18,9 @@ class Solution {
         r--;
         continue;
       }
-      if (tolower(s[l]) != tolower(s[r])) {
+      if (tolower(s[l++]) != tolower(s[r--])) {
         return false;
       }
-      l++;
-      r--;
     }
     return true;
   }
