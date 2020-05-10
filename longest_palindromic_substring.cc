@@ -6,9 +6,7 @@
 namespace {
 class Solution {
  public:
-  std::string longestPalindrome(std::string s) {
-    return expand_center(s);
-  }
+  std::string longestPalindrome(std::string s) { return expand_center(s); }
 
   int check_valid(std::string& s, int i, int j, int* ll, int* rr) {
     if (s[i] != s[j]) {
@@ -16,7 +14,7 @@ class Solution {
     }
     int n = s.length();
     int l = i, r = j;
-    while(l >= 0 && r <= n - 1) {
+    while (l >= 0 && r <= n - 1) {
       if (s[l] != s[r]) {
         break;
       }
@@ -40,8 +38,8 @@ class Solution {
         ma = l;
         mb = r;
       }
-      if (i < (n-1)) {
-        int nn = check_valid(s, i, i+1, &l, &r);
+      if (i < (n - 1)) {
+        int nn = check_valid(s, i, i + 1, &l, &r);
         if (nn > max_len) {
           max_len = nn;
           ma = l;
@@ -51,7 +49,6 @@ class Solution {
     }
     return s.substr(ma, mb - ma + 1);
   }
-
 
   std::string brute_force(std::string s) {
     int n = s.length();
@@ -82,7 +79,7 @@ class Solution {
     return s.substr(ma, mb - ma + 1);
   }
 };
-} // namespace
+}  // namespace
 
 void solve(std::string s) {
   Solution sol;

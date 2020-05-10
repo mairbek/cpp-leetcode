@@ -1,6 +1,6 @@
 #include <iostream>
-#include <vector>
 #include <unordered_map>
+#include <vector>
 
 namespace {
 
@@ -27,7 +27,7 @@ class Solution {
     return result;
   }
 };
-} // namespace
+}  // namespace
 
 using int64 = long long;
 

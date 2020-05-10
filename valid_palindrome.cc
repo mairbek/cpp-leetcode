@@ -25,7 +25,7 @@ class Solution {
     return true;
   }
 };
-} // namespace
+}  // namespace
 
 void solve(std::string s) {
   Solution sol;

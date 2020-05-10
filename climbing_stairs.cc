@@ -5,7 +5,7 @@ namespace {
 // https://leetcode.com/problems/climbing-stairs/
 // easy fibonacci
 class Solution {
-public:
+ public:
   int fib(int n) {
     int a = 1, b = 1;
     for (int i = 1; i < n; i++) {
@@ -15,11 +15,9 @@ public:
     }
     return b;
   }
- int climbStairs(int n) {
-   return fib(n);
- }
+  int climbStairs(int n) { return fib(n); }
 };
-} // namespace
+}  // namespace
 
 using int64 = long long;
 

@@ -9,8 +9,8 @@ class Solution {
   bool isValid(std::string s) {
     std::stack<char> st;
     for (int i = 0; i < s.size(); i++) {
-    if (s[i] == '{' || s[i] == '(' || s[i] == '[') {
-      st.push(s[i]);
+      if (s[i] == '{' || s[i] == '(' || s[i] == '[') {
+        st.push(s[i]);
         continue;
       }
       if (st.empty()) {
@@ -31,7 +31,7 @@ class Solution {
     return st.empty();
   }
 };
-} // namespace
+}  // namespace
 
 void solve(std::string s) {
   Solution sol;

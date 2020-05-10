@@ -12,7 +12,7 @@ class Solution {
     int n = a.size();
     int m = a[0].size();
 
-    int dp[n+1][m+1];
+    int dp[n + 1][m + 1];
 
     dp[0][0] = 0;
     dp[1][0] = 0;
@@ -27,14 +27,14 @@ class Solution {
 
     for (int i = 0; i < n; i++) {
       for (int j = 0; j < m; j++) {
-        dp[i+1][j+1] = std::min(dp[i][j+1], dp[i+1][j]);
-        dp[i+1][j+1] += a[i][j];
+        dp[i + 1][j + 1] = std::min(dp[i][j + 1], dp[i + 1][j]);
+        dp[i + 1][j + 1] += a[i][j];
       }
     }
     return dp[n][m];
   }
 };
-} // namespace
+}  // namespace
 
 using int64 = long long;
 

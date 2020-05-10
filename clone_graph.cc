@@ -1,6 +1,6 @@
 #include <iostream>
-#include <vector>
 #include <unordered_map>
+#include <vector>
 
 // https://leetcode.com/problems/clone-graph/
 // clone graph, recursive.
@@ -53,8 +53,6 @@ class Solution {
     return clone;
   }
 };
-} // namespace
+}  // namespace
 
-int main(int argc, const char** argv) {
-  return 0;
-}
+int main(int argc, const char** argv) { return 0; }

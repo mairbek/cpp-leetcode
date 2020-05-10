@@ -7,7 +7,7 @@ namespace {
 // O(N**2) solution using a stack
 // Similar to `rectangle_histogram.cc`.
 class Solution {
-public:
+ public:
   int maximalRectangle(std::vector<std::vector<char>>& matrix) {
     int n = matrix.size();
     int m = n > 0 ? matrix[0].size() : 0;
@@ -24,7 +24,7 @@ public:
       std::cout << std::endl;
       std::vector<int> st;
       for (int j = 0; j < m; j++) {
-        while(!st.empty() && hor[st.back()] >= hor[j]) {
+        while (!st.empty() && hor[st.back()] >= hor[j]) {
           int top = st.back();
           st.pop_back();
 
@@ -33,7 +33,7 @@ public:
         }
         st.push_back(j);
       }
-      while(!st.empty()) {
+      while (!st.empty()) {
         int top = st.back();
         st.pop_back();
 
@@ -44,7 +44,7 @@ public:
     return max_area;
   }
 };
-} // namespace
+}  // namespace
 
 using int64 = long long;
 
@@ -55,6 +55,9 @@ void solve(std::vector<std::vector<char>> s) {
 }
 
 int main(int argc, const char** argv) {
-  solve(std::vector<std::vector<char>>{{'1','0','1','0','0'},{'1','0','1','1','1'},{'1','1','1','1','1'},{'1','0','0','1','0'}});
+  solve(std::vector<std::vector<char>>{{'1', '0', '1', '0', '0'},
+                                       {'1', '0', '1', '1', '1'},
+                                       {'1', '1', '1', '1', '1'},
+                                       {'1', '0', '0', '1', '0'}});
   return 0;
 }

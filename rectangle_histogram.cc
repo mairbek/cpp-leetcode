@@ -13,7 +13,7 @@ class Solution {
 
     int max_area = 0;
     for (int i = 0; i < n; i++) {
-      while(s.size() > 0 && a[s.back()] >= a[i]) {
+      while (s.size() > 0 && a[s.back()] >= a[i]) {
         int top = s.back();
         s.pop_back();
         int height = a[top];
@@ -23,7 +23,7 @@ class Solution {
       s.push_back(i);
     }
 
-    while(s.size() > 0) {
+    while (s.size() > 0) {
       int top = s.back();
       s.pop_back();
       int height = a[top];
@@ -33,9 +33,8 @@ class Solution {
 
     return max_area;
   }
-
 };
-} // namespace
+}  // namespace
 
 using int64 = long long;
 
@@ -51,7 +50,7 @@ void solve(std::vector<int> s) {
 }
 
 int main(int argc, const char** argv) {
-  solve(std::vector<int>{2,1,5,6,2,3});
+  solve(std::vector<int>{2, 1, 5, 6, 2, 3});
   solve(std::vector<int>{5, 3, 2, 1, 1, 1, 1});
   solve(std::vector<int>{0});
   solve(std::vector<int>{1});

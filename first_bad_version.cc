@@ -5,10 +5,8 @@
 // simple binary search.
 namespace {
 class Solution {
-public:
-  bool isBadVersion(int n) {
-    return n >= 3;
-  }
+ public:
+  bool isBadVersion(int n) { return n >= 3; }
 
   int firstBadVersion(int n) {
     int l = 1, r = n;
@@ -23,7 +21,7 @@ public:
     return l;
   }
 };
-} // namespace
+}  // namespace
 
 void solve(int n) {
   Solution sol;

@@ -6,9 +6,7 @@
 namespace {
 class Solution {
  public:
-  int longestValidParentheses(std::string s) {
-    return faster(s);
-  }
+  int longestValidParentheses(std::string s) { return faster(s); }
 
   int faster(std::string s) {
     int n = s.size();
@@ -93,12 +91,12 @@ class Solution {
       if (valid > max_valid) {
         max_valid = valid;
       }
-     }
+    }
 
     return max_valid;
   }
 };
-} // namespace
+}  // namespace
 
 void solve(std::string s) {
   Solution sol;
