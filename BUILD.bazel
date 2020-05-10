@@ -76,3 +76,8 @@ cc_binary(
     name = "valid_palindrome_ii",
     srcs = ["valid_palindrome_ii.cc"],
 )
+
+cc_binary(
+    name = "triangle",
+    srcs = ["triangle.cc"],
+)
