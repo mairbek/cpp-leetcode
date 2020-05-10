@@ -8,3 +8,4 @@ bazel-cpp-leetcode
 bazel-genfiles
 bazel-out
 bazel-testlogs
+.vscode
