@@ -71,3 +71,8 @@ cc_binary(
     name = "min_path_sum",
     srcs = ["min_path_sum.cc"],
 )
+
+cc_binary(
+    name = "valid_palindrome_ii",
+    srcs = ["valid_palindrome_ii.cc"],
+)
