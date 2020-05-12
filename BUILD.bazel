@@ -96,3 +96,8 @@ cc_binary(
     name = "counting_bits",
     srcs = ["counting_bits.cc"],
 )
+
+cc_binary(
+    name = "perfect_squares",
+    srcs = ["perfect_squares.cc"],
+)
