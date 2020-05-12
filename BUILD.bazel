@@ -91,3 +91,8 @@ cc_binary(
     name = "coin_change",
     srcs = ["coin_change.cc"],
 )
+
+cc_binary(
+    name = "counting_bits",
+    srcs = ["counting_bits.cc"],
+)
