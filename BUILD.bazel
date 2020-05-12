@@ -86,3 +86,8 @@ cc_binary(
     name = "decode_ways",
     srcs = ["decode_ways.cc"],
 )
+
+cc_binary(
+    name = "coin_change",
+    srcs = ["coin_change.cc"],
+)
