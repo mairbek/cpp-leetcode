@@ -101,3 +101,8 @@ cc_binary(
     name = "perfect_squares",
     srcs = ["perfect_squares.cc"],
 )
+
+cc_binary(
+    name = "integer_break",
+    srcs = ["integer_break.cc"],
+)
