@@ -106,3 +106,8 @@ cc_binary(
     name = "integer_break",
     srcs = ["integer_break.cc"],
 )
+
+cc_binary(
+    name = "basic_calculator_ii",
+    srcs = ["basic_calculator_ii.cc"],
+)
