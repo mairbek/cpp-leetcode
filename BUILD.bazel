@@ -136,3 +136,8 @@ cc_binary(
     name = "word_break",
     srcs = ["word_break.cc"],
 )
+
+cc_binary(
+    name = "word_break_ii",
+    srcs = ["word_break_ii.cc"],
+)
