@@ -6,12 +6,44 @@
 
 namespace {
 // https://leetcode.com/problems/word-break/
-// ???
+// DP O(N * M)
 class Solution {
  public:
   bool wordBreak(std::string s, std::vector<std::string>& words) {
-    std::unordered_map<int, bool> cache;
-    return loop(s, 0, words, cache);
+    // std::unordered_map<int, bool> cache;
+    // return loop(s, 0, words, cache);
+    return dp(s, words);
+  }
+
+  bool dp(std::string_view sv, std::vector<std::string>& words) {
+    int n = sv.length();
+    bool dp[n + 1];
+    dp[0] = true;
+    for (int i = 0; i < n; i++) {
+      dp[i + 1] = false;
+      for (auto& word : words) {
+        int m = word.length();
+        if (i < (m - 1)) {
+          continue;
+        }
+        bool match = true;
+        for (int j = 0; j < m; j++) {
+          if (sv[i - m + 1 + j] != word[j]) {
+            match = false;
+            break;
+          }
+        }
+        if (match && dp[i - m + 1]) {
+          dp[i + 1] = true;
+          break;
+        }
+      }
+    }
+    for (int i = 0; i <= n; i++) {
+      std::cout << dp[i] << " ";
+    }
+    std::cout << std::endl;
+    return dp[n];
   }
 
   bool loop(std::string_view sv, int start, std::vector<std::string>& words,
@@ -56,7 +88,7 @@ using int64 = long long;
 void solve(std::string s, std::vector<std::string> words) {
   Solution sol;
   bool result = sol.wordBreak(s, words);
-  std::cout << result << std::endl;
+  std::cout << s << " | " << result << std::endl;
 }
 
 int main(int argc, const char** argv) {
