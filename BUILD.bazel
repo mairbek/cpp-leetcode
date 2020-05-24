@@ -116,7 +116,18 @@ cc_binary(
     name = "basic_calculator",
     srcs = ["basic_calculator.cc"],
 )
+
 cc_binary(
     name = "kth_smallest_element_in_a_bst",
     srcs = ["kth_smallest_element_in_a_bst.cc"],
+)
+
+cc_binary(
+    name = "vertical_order_traversal_of_a_binary_tree",
+    srcs = ["vertical_order_traversal_of_a_binary_tree.cc"],
+)
+
+cc_binary(
+    name = "unique_paths",
+    srcs = ["unique_paths.cc"],
 )
