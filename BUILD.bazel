@@ -141,3 +141,8 @@ cc_binary(
     name = "word_break_ii",
     srcs = ["word_break_ii.cc"],
 )
+
+cc_binary(
+    name = "create_maximum_number",
+    srcs = ["create_maximum_number.cc"],
+)
