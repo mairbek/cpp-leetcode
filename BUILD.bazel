@@ -146,3 +146,13 @@ cc_binary(
     name = "create_maximum_number",
     srcs = ["create_maximum_number.cc"],
 )
+
+cc_binary(
+    name = "falling_squares",
+    srcs = ["falling_squares.cc"],
+)
+
+cc_binary(
+    name = "randomized_collection",
+    srcs = ["randomized_collection.cc"],
+)
