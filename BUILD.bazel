@@ -156,3 +156,9 @@ cc_binary(
     name = "randomized_collection",
     srcs = ["randomized_collection.cc"],
 )
+
+cc_binary(
+    name = "divide_two_integers",
+    srcs = ["divide_two_integers.cc"],
+)
+
