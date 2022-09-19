@@ -166,3 +166,8 @@ cc_binary(
     name = "number_of_one_bits",
     srcs = ["number_of_one_bits.cc"],
 )
+
+cc_binary(
+    name = "two_sum",
+    srcs = ["two_sum.cc"],
+)
