@@ -162,3 +162,7 @@ cc_binary(
     srcs = ["divide_two_integers.cc"],
 )
 
+cc_binary(
+    name = "number_of_one_bits",
+    srcs = ["number_of_one_bits.cc"],
+)
