@@ -176,3 +176,8 @@ cc_binary(
     name = "sum_of_two_integers",
     srcs = ["sum_of_two_integers.cc"],
 )
+
+cc_binary(
+    name = "maximum_subarray",
+    srcs = ["maximum_subarray.cc"],
+)
