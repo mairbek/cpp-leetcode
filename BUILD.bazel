@@ -191,3 +191,8 @@ cc_binary(
     name = "contains_duplicate",
     srcs = ["contains_duplicate.cc"],
 )
+
+cc_binary(
+    name = "product_except_self",
+    srcs = ["product_except_self.cc"],
+)
