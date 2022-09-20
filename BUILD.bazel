@@ -171,3 +171,8 @@ cc_binary(
     name = "two_sum",
     srcs = ["two_sum.cc"],
 )
+
+cc_binary(
+    name = "sum_of_two_integers",
+    srcs = ["sum_of_two_integers.cc"],
+)
