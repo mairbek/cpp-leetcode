@@ -196,3 +196,8 @@ cc_binary(
     name = "product_except_self",
     srcs = ["product_except_self.cc"],
 )
+
+cc_binary(
+    name = "rotate_image",
+    srcs = ["rotate_image.cc"],
+)
