@@ -6,59 +6,32 @@ namespace {
 
 class Solution {
  public:
-  int traverse(std::vector<std::vector<int>>& matrix, std::vector<int>* result, std::vector<std::vector<bool>>* visited, int* i, int* j, int di, int dj) {
-      int count = 0;
-      int n = matrix.size();
-      int m = matrix[0].size();
-      while (true) {
-        int ii = *i + di;
-        int jj = *j + dj;
-        if (ii >= n) {
-            break;
-        }
-        if (jj >= m) {
-            break;
-        }
-        if (ii < 0) {
-            break;
-        }
-        if (jj < 0) {
-            break;
-        }
-        if ((*visited)[ii][jj]) {
-            break;
-        }
-        result->push_back(matrix[ii][jj]);
-        (*visited)[ii][jj] = true;
-        *i = ii;
-        *j = jj;
-        count++;
-      }
-      return count;
+
+  int floorMod(int x, int y) {
+    return ((x % y) + y) % y;
   }
 
   std::vector<int> spiralOrder(std::vector<std::vector<int>>& matrix) {
-    std::vector<int> result;
     int n = matrix.size();
     int m = matrix[0].size();
+    std::vector<int> result;
     int i = 0;
-    int j = -1;
+    int j = 0;
     std::vector<std::vector<bool>> visited(n, std::vector<bool>(m, false));
-
+    int dir[4][2] = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+    int d = 0;
     while (result.size() < n * m) {
-        if (traverse(matrix, &result, &visited, &i, &j, 0, 1) == 0) {
-            break;
+        result.push_back(matrix[i][j]);
+        visited[i][j] = true;
+        int ii = floorMod(i + dir[d][0], n);
+        int jj = floorMod(j + dir[d][1], m);
+        if (visited[ii][jj]) {
+            d = (d + 1) % 4;
         }
-        if (traverse(matrix, &result, &visited, &i, &j, 1, 0) == 0) {
-            break;
-        }
-        if (traverse(matrix, &result, &visited, &i, &j, 0, -1) == 0) {
-            break;
-        }
-        if (traverse(matrix, &result, &visited, &i, &j, -1, 0) == 0) {
-            break;
-        }
+        i += dir[d][0];
+        j += dir[d][1];
     }
+
     return result;
   }
 };
