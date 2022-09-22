@@ -201,3 +201,8 @@ cc_binary(
     name = "rotate_image",
     srcs = ["rotate_image.cc"],
 )
+
+cc_binary(
+    name = "spiral_order",
+    srcs = ["spiral_order.cc"],
+)
