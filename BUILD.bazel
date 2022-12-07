@@ -231,3 +231,8 @@ cc_binary(
     name = "non_overlapping_intervals",
     srcs = ["non_overlapping_intervals.cc"],
 )
+
+cc_binary(
+    name = "rotate_180",
+    srcs = ["rotate_180.cc"],
+)
