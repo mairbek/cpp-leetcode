@@ -8,13 +8,15 @@ class Solution {
  public:
   int maxArea(std::vector<int>& height) {
     int max_area = 0;
-    for (int i = 0; i < height.size(); i++) {
-        for (int j = i + 1; j < height.size(); j++) {
-            int area = std::min(height[i], height[j]) * (j - i);
-            if (area > max_area) {
-                max_area = area;
-            }
-        }
+    int left = 0;
+    int right = height.size() - 1;
+    while (left < right) {
+      max_area = std::max(max_area, std::min(height[left], height[right]) * (right - left));
+      if (height[left] < height[right]) {
+        left++;
+      } else {
+        right--;
+      }
     }
     return max_area;
   }
