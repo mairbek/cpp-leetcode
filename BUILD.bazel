@@ -256,3 +256,8 @@ cc_binary(
     name = "house_robber_ii",
     srcs = ["house_robber_ii.cc"],
 )
+
+cc_binary(
+    name = "the_skyline_problem",
+    srcs = ["the_skyline_problem.cc"],
+)
