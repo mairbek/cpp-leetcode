@@ -266,3 +266,14 @@ cc_binary(
     name = "contains_duplicate_iii",
     srcs = ["contains_duplicate_iii.cc"],
 )
+
+cc_binary(
+    name = "failing_squares",
+    srcs = ["falling_squares.cc"],
+)
+
+cc_binary(
+    name = "lower_bound",
+    srcs = ["lower_bound.cc"],
+)
+
