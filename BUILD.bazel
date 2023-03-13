@@ -286,3 +286,8 @@ cc_binary(
     name = "isomorphic_strings",
     srcs = ["isomorphic_strings.cc"],
 )
+
+cc_binary(
+    name = "word_pattern",
+    srcs = ["word_pattern.cc"],
+)
