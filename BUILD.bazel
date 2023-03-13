@@ -277,3 +277,8 @@ cc_binary(
     srcs = ["lower_bound.cc"],
 )
 
+cc_binary(
+    name = "shifting_letters_ii",
+    srcs = ["shifting_letters_ii.cc"],
+)
+
