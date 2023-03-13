@@ -282,3 +282,7 @@ cc_binary(
     srcs = ["shifting_letters_ii.cc"],
 )
 
+cc_binary(
+    name = "isomorphic_strings",
+    srcs = ["isomorphic_strings.cc"],
+)
