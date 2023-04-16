@@ -296,3 +296,8 @@ cc_binary(
     name = "text_justification",
     srcs = ["text_justification.cc"],
 )
+
+py_binary(
+    name = "text_justification_py",
+    srcs = ["text_justification_py.py"],
+)
