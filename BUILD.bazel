@@ -306,3 +306,8 @@ py_binary(
     name = "parse_lisp_expression",
     srcs = ["parse_lisp_expression.py"],
 )
+
+cc_binary(
+    name = "split_message_based_on_limit",
+    srcs = ["split_message_based_on_limit.cc"],
+)
