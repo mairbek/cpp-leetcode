@@ -301,3 +301,8 @@ py_binary(
     name = "text_justification_py",
     srcs = ["text_justification_py.py"],
 )
+
+py_binary(
+    name = "parse_lisp_expression",
+    srcs = ["parse_lisp_expression.py"],
+)
