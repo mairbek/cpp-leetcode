@@ -311,3 +311,8 @@ cc_binary(
     name = "split_message_based_on_limit",
     srcs = ["split_message_based_on_limit.cc"],
 )
+
+cc_binary(
+    name = "minimum_window_substring",
+    srcs = ["minimum_window_substring.cc"],
+)
