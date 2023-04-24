@@ -1,50 +1,55 @@
 #include <algorithm>
 #include <iostream>
-#include <unordered_set>
+#include <map>
+#include <set>
+#include <unordered_map>
 #include <vector>
 
 namespace {
 class Solution {
  public:
   std::string minWindow(std::string s, std::string t) {
-    std::unordered_multiset<char> tchars;
+    std::unordered_map<char, int> tchars;
     for (int i = 0; i < t.length(); i++) {
-      tchars.insert(t[i]);
+      tchars[t[i]]++;
     }
-
-    std::vector<std::pair<int, std::unordered_multiset<char>*>> pending;
-    int idx = 0;
-    int min_result = s.length() + 1;
+    std::set<int> matches;
+    std::unordered_map<char, std::set<int>> w;
+    int ptr = 0;
+    int min_len = s.length() + 1;
     for (int i = 0; i < s.length(); i++) {
-      auto it = tchars.find(s[i]);
-      if (it == tchars.end()) {
+      char ch = s[i];
+      if (tchars.count(ch) == 0) {
         continue;
       }
-      pending.emplace_back(std::make_pair(i, new std::unordered_multiset<char>()));
-      pending.back().second->insert(tchars.begin(), tchars.end());
-
-      for (auto pit = pending.begin(); pit != pending.end(); ) {
-        auto pchars = pit->second;
-        auto it = pchars->find(s[i]);
-        if (it != pchars->end()) {
-          pchars->erase(it);
-          if (pchars->size() == 0) {
-            int b = pit->first;
-            if (min_result > (i - b + 1)) {
-              min_result = (i - b + 1);
-              idx = b;
-            }
-            pit = pending.erase(pit);
-            continue;
-          }
-        }
-        pit++;
+      w[ch].insert(i);
+      matches.insert(i);
+      if (w[ch].size() > tchars[ch]) {
+        auto f = w[ch].begin();
+        matches.erase(*f);
+        w[ch].erase(f);
       }
+      if (matches.size() == t.length()) {
+        int f = *matches.begin();
+        int l = *matches.rbegin();
+        int new_min_len = l - f + 1;
+        if (new_min_len < min_len) {
+          ptr = f;
+          min_len = new_min_len;
+        }
+      }
+      /*
+      std::cout << "s[i]" << s[i] << " ";
+      for (auto m : matches) {
+        std::cout << m << " ";
+      }
+      std::cout << std::endl;
+      */
     }
-    if (min_result <= s.length()) {
-      return s.substr(idx, min_result);
+    if (min_len > s.length()) {
+      return "";
     }
-    return "";
+    return s.substr(ptr, min_len);
   }
 };
 }  // namespace
@@ -60,5 +65,8 @@ int main(int argc, char const** argv) {
   solve("a", "a");
   solve("a", "aa");
   solve("babab", "ab");
+  solve("adz", "az");
+  solve("aaaabaaaaaaaazb", "azb");
+  solve("cabwefgewcwaefgcf", "cae");
   return 0;
 }
