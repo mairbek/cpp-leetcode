@@ -321,3 +321,8 @@ cc_binary(
     name = "sliding_window_maximum",
     srcs = ["sliding_window_maximum.cc"],
 )
+
+cc_binary(
+    name = "substring_with_concatenation_of_all_words",
+    srcs = ["substring_with_concatenation_of_all_words.cc"]
+)
