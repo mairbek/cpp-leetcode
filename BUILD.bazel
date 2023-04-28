@@ -326,3 +326,8 @@ cc_binary(
     name = "substring_with_concatenation_of_all_words",
     srcs = ["substring_with_concatenation_of_all_words.cc"]
 )
+
+cc_binary(
+    name = "search_a_2d_matrix",
+    srcs = ["search_a_2d_matrix.cc"]
+)
