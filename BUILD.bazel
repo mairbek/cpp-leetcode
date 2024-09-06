@@ -336,3 +336,8 @@ cc_binary(
     name = "random_pick_with_weight",
     srcs = ["random_pick_with_weight.cc"]
 )
+
+cc_binary(
+    name = "random_pick_index",
+    srcs = ["random_pick_index.cc"]
+)
