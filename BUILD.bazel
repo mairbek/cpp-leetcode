@@ -346,3 +346,8 @@ cc_binary(
     name = "next_greater_element",
     srcs = ["next_greater_element.cc"]
 )
+
+cc_binary(
+    name = "daily_temperatures",
+    srcs = ["daily_temperatures.cc"]
+)
