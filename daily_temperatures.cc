@@ -7,18 +7,18 @@ namespace {
 class Solution {
  public:
   std::vector<int> dailyTemperatures(std::vector<int>& temperatures) {
-    std::stack<std::pair<int, int>> st;
+    std::stack<int> st;
     std::vector<int> results(temperatures.size(), 0);
-    for (int i = temperatures.size() - 1; i >= 0; i--) {
-      while (!st.empty() && st.top().first <= temperatures[i]) {
+    for (int i = 0; i < temperatures.size(); i++) {
+      while (!st.empty()) {
+        int j = st.top();
+        if (temperatures[j] >= temperatures[i]) {
+          break;
+        }
+        results[j] = i - j;
         st.pop();
       }
-      int next = 0;
-      if (!st.empty()) {
-        next = st.top().second - i;
-      }
-      results[i] = next;
-      st.emplace(temperatures[i], i);
+      st.push(i);
     }
     return results;
   }
