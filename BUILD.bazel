@@ -341,3 +341,8 @@ cc_binary(
     name = "random_pick_index",
     srcs = ["random_pick_index.cc"]
 )
+
+cc_binary(
+    name = "next_greater_element",
+    srcs = ["next_greater_element.cc"]
+)
