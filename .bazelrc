@@ -1,0 +1,12 @@
+# Use C++ 20.
+build --cxxopt=-std=c++20
+build --host_cxxopt=-std=c++20
+
+# Force the use of Clang for all builds. FuzzTest relies on Clang for sanitizer
+# coverage (https://clang.llvm.org/docs/SanitizerCoverage.html).
+build --action_env=CC=/opt/homebrew/opt/llvm/bin/clang
+build --action_env=CXX=/opt/homebrew/opt/llvm/bin/clang++
+
+# Show everything when running tests.
+test --test_output=streamed
+
