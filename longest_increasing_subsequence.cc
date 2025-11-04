@@ -6,28 +6,17 @@
 namespace {
 class Solution {
  public:
-  int lengthOfLIS(std::vector<int>& nums) { 
-    if (nums.size() == 0) {
-      return 0;
-    }
-    std::vector<int> lis(nums.size(), 0);
-    lis[0] = 1;
-    int result = 1;
-    for (int i = 1; i < nums.size(); i++) {
-      int max = 0;
-      for (int j = 0; j < i; j++) {
-        if (nums[j] < nums[i]) {
-          if (max < lis[j]) {
-            max = lis[j];
-          }
-        }
-      }
-      lis[i] = 1 + max;
-      if (result < lis[i]) {
-        result = lis[i];
+  int lengthOfLIS(std::vector<int>& nums) {
+    std::vector<int> tails;
+    for (int i = 0; i < nums.size(); i++) {
+      auto it = std::lower_bound(tails.begin(), tails.end(), nums[i]);
+      if (it == tails.end()) {
+        tails.push_back(nums[i]);
+      } else {
+        *it = nums[i];
       }
     }
-    return result; 
+    return tails.size();
   }
 };
 }  // namespace

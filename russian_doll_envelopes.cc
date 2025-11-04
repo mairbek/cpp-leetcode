@@ -17,24 +17,17 @@ class Solution {
     if (envelopes.size() == 0) {
       return 0;
     }
-    std::vector<int> lis(envelopes.size(), 0);
-    lis[0] = 1;
-    int result = 1;
-    for (int i = 1; i < envelopes.size(); i++) {
-      int max = 0;
-      for (int j = 0; j < i; j++) {
-        if (envelopes[j][0] < envelopes[i][0] && envelopes[j][1] < envelopes[i][1]) {
-          if (max < lis[j]) {
-            max = lis[j];
-          }
-        }
-      }
-      lis[i] = 1 + max;
-      if (result < lis[i]) {
-        result = lis[i];
+    std::vector<int> tails;
+    for (int i = 0; i < envelopes.size(); i++) {
+      int h = envelopes[i][1];
+      auto it = std::lower_bound(tails.begin(), tails.end(), h);
+      if (it == tails.end()) {
+        tails.push_back(h);
+      } else {
+        *it = h;
       }
     }
-    return result;
+    return tails.size();
   }
 };
 }  // namespace
