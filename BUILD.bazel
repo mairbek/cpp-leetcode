@@ -358,3 +358,8 @@ cc_binary(
     name = "find_the_duplicate_number",
     srcs = ["find_the_duplicate_number.cc"]
 )
+
+cc_binary(
+    name = "longest_increasing_subsequence",
+    srcs = ["longest_increasing_subsequence.cc"]
+)
