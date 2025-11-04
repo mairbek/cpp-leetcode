@@ -353,3 +353,8 @@ cc_binary(
     name = "daily_temperatures",
     srcs = ["daily_temperatures.cc"]
 )
+
+cc_binary(
+    name = "find_the_duplicate_number",
+    srcs = ["find_the_duplicate_number.cc"]
+)
