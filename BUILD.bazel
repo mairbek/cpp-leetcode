@@ -363,3 +363,8 @@ cc_binary(
     name = "longest_increasing_subsequence",
     srcs = ["longest_increasing_subsequence.cc"]
 )
+
+cc_binary(
+    name = "russian_doll_envelopes",
+    srcs = ["russian_doll_envelopes.cc"]
+)
