@@ -1,1 +1,42 @@
 Leetcode bs
+
+## Development Setup
+
+This project uses Nix and direnv for a reproducible development environment.
+
+### Prerequisites
+
+- [Nix](https://nixos.org/download.html) with flakes enabled
+- [direnv](https://direnv.net/)
+
+### Quick Start
+
+1. Clone the repository:
+   ```bash
+   git clone <repo-url>
+   cd cpp-leetcode
+   ```
+
+2. Allow direnv to load the environment:
+   ```bash
+   direnv allow
+   ```
+
+3. The development environment will automatically load with:
+   - Bazel 7.4.1 (via bazelisk)
+   - Clang 18.1.8
+   - C++20 support
+   - All required build tools
+
+4. Build and run:
+   ```bash
+   bazel build //...
+   bazel run //:two_sum
+   ```
+
+### Manual Nix Shell
+
+If you prefer not to use direnv:
+```bash
+nix develop
+```
