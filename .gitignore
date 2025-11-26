@@ -8,3 +8,6 @@ bazel-testlogs
 
 # Direnv
 .direnv
+
+# Generated clangd config
+.clangd
