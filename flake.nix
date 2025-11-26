@@ -22,18 +22,6 @@
             llvmPackages_18.llvm
             llvmPackages_18.libcxx
 
-            # Build essentials
-            gcc
-            gnumake
-            cmake
-            pkg-config
-
-            # Python (for some scripts in BUILD.bazel)
-            python3
-
-            # Development tools
-            git
-
             # Create a bazel wrapper script
             (pkgs.writeShellScriptBin "bazel" ''
               exec ${pkgs.bazelisk}/bin/bazelisk "$@"

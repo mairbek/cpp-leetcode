@@ -31,7 +31,6 @@ class Solution {
         q.pop();
       }
 
-      long long value = total_speed * e;
       if (total_speed * e > result) {
         result = total_speed * e;
       }
