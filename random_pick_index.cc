@@ -1,5 +1,4 @@
 #include <iostream>
-#include <map>
 #include <unordered_map>
 #include <vector>
 
@@ -13,7 +12,7 @@ class Solution {
   }
 
   int pick(int target) {
-    const auto& v = items_[target];
+    auto const& v = items_[target];
     int r = rand() % v.size();
     return v[r];
   }

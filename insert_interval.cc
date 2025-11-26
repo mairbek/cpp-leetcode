@@ -14,7 +14,7 @@ class Solution {
     st.push_back(newIntervalConst);
 
     int i = 0;
-    for (;i < intervals.size(); i++) {
+    for (; i < intervals.size(); i++) {
       if (intervals[i][1] < st[0][0]) {
         result.push_back(intervals[i]);
       } else if (intervals[i][0] > st[0][1]) {

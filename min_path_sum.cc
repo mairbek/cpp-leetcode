@@ -12,7 +12,7 @@ class Solution {
     int n = a.size();
     int m = a[0].size();
 
-    int dp[n + 1][m + 1];
+    std::vector<std::vector<int>> dp(n + 1, std::vector<int>(m + 1));
 
     dp[0][0] = 0;
     dp[1][0] = 0;
@@ -44,7 +44,7 @@ void solve(std::vector<std::vector<int>> s) {
   std::cout << result << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve(std::vector<std::vector<int>>{{1, 3, 1}, {1, 5, 1}, {4, 2, 1}});
   return 0;
 }

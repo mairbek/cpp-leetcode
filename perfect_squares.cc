@@ -1,5 +1,4 @@
 #include <iostream>
-#include <unordered_map>
 #include <vector>
 
 namespace {
@@ -11,7 +10,7 @@ class Solution {
  public:
   int numSquares(int n) {
     std::vector<int> squares;
-    int dp[n + 1];
+    std::vector<int> dp(n + 1);
     dp[0] = 0;
 
     int next_sq = 1;
@@ -40,7 +39,7 @@ void solve(int n) {
   std::cout << n << " | " << result << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve(1);
   solve(12);
   solve(13);

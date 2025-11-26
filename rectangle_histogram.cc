@@ -49,7 +49,7 @@ void solve(std::vector<int> s) {
   std::cout << result << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve(std::vector<int>{2, 1, 5, 6, 2, 3});
   solve(std::vector<int>{5, 3, 2, 1, 1, 1, 1});
   solve(std::vector<int>{0});

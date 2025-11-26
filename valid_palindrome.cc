@@ -1,5 +1,4 @@
 #include <iostream>
-#include <stack>
 
 // https://leetcode.com/problems/valid-palindrome
 // Two pointers
@@ -33,7 +32,7 @@ void solve(std::string s) {
 
   std::cout << s << " " << result << std::endl;
 }
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve("A man, a plan, a canal: Panama");
   solve("race a car");
   solve("aba");

@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include <string_view>
-#include <unordered_map>
 #include <vector>
 
 namespace {
@@ -16,7 +15,7 @@ class Solution {
     }
     int n = s.length();
     int m = words.size();
-    bool dp[n + 1][m + 1];
+    std::vector<std::vector<bool>> dp(n + 1, std::vector<bool>(m + 1));
     dp[0][0] = 1;
 
     for (int wi = 1; wi <= m; wi++) {
@@ -103,7 +102,7 @@ void solve(std::string s, std::vector<std::string> words) {
   std::cout << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve("a", std::vector<std::string>{});
   solve("leetcode", std::vector<std::string>{"leet", "code"});
   solve("applepenapple", std::vector<std::string>{"apple", "pen"});

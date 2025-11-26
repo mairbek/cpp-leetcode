@@ -45,7 +45,7 @@ void solve(TreeNode* node, int k) {
 
   std::cout << k << " " << result << std::endl;
 }
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   {
     TreeNode root(3, new TreeNode(1, nullptr, new TreeNode(2)),
                   new TreeNode(4));

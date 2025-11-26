@@ -5,7 +5,8 @@ namespace {
 
 class Solution {
  public:
-  bool dfs(std::vector<std::vector<char>>& board, std::string word, std::vector<std::vector<bool>>& visited, int w, int i, int j) {
+  bool dfs(std::vector<std::vector<char>>& board, std::string word,
+           std::vector<std::vector<bool>>& visited, int w, int i, int j) {
     int n = board.size();
     int m = board[0].size();
     int ws = word.size();
@@ -22,16 +23,16 @@ class Solution {
       return false;
     }
     visited[i][j] = true;
-    if (dfs(board, word, visited, w+1, i-1, j)) {
+    if (dfs(board, word, visited, w + 1, i - 1, j)) {
       return true;
     }
-    if (dfs(board, word, visited, w+1, i, j-1)) {
+    if (dfs(board, word, visited, w + 1, i, j - 1)) {
       return true;
     }
-    if (dfs(board, word, visited, w+1, i+1, j)) {
+    if (dfs(board, word, visited, w + 1, i + 1, j)) {
       return true;
     }
-    if (dfs(board, word, visited, w+1, i, j+1)) {
+    if (dfs(board, word, visited, w + 1, i, j + 1)) {
       return true;
     }
     visited[i][j] = false;
@@ -58,29 +59,34 @@ class Solution {
 
 using int64 = long long;
 
-void solve(std::vector<std::vector<char>> board, std::string  word) {
+void solve(std::vector<std::vector<char>> board, std::string word) {
   Solution sol;
   bool result = sol.exist(board, word);
   std::cout << result << std::endl;
 }
 
-int main(int argc, const char** argv) {
-  solve(std::vector<std::vector<char>>{{'A', 'B', 'C', 'E'},
-                                       {'S', 'F', 'C', 'S'},
-                                       {'A', 'D', 'E', 'E'}}, "ABCCED");
-  solve(std::vector<std::vector<char>>{{'A', 'B', 'C', 'E'},
-                                       {'S', 'F', 'C', 'S'},
-                                       {'A', 'D', 'E', 'E'}}, "SEE");
-  solve(std::vector<std::vector<char>>{{'A', 'B', 'C', 'E'},
-                                       {'S', 'F', 'C', 'S'},
-                                       {'A', 'D', 'E', 'E'}}, "ABCB");
-  solve(std::vector<std::vector<char>>{{'A', 'B', 'C', 'E'},
-                                       {'S', 'F', 'C', 'S'},
-                                       {'A', 'D', 'E', 'E'}}, "KEK");
+int main(int argc, char const** argv) {
+  solve(
+      std::vector<std::vector<char>>{
+          {'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}},
+      "ABCCED");
+  solve(
+      std::vector<std::vector<char>>{
+          {'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}},
+      "SEE");
+  solve(
+      std::vector<std::vector<char>>{
+          {'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}},
+      "ABCB");
+  solve(
+      std::vector<std::vector<char>>{
+          {'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}},
+      "KEK");
   solve(std::vector<std::vector<char>>{{'A'}}, "A");
   solve(std::vector<std::vector<char>>{{'A', 'B'}, {'D', 'C'}}, "ABCD");
-  solve(std::vector<std::vector<char>>{{'A', 'B', 'C', 'E'},
-                                       {'S', 'F', 'E', 'S'},
-                                       {'A', 'D', 'E', 'E'}}, "ABCESEEEFS");
+  solve(
+      std::vector<std::vector<char>>{
+          {'A', 'B', 'C', 'E'}, {'S', 'F', 'E', 'S'}, {'A', 'D', 'E', 'E'}},
+      "ABCESEEEFS");
   return 0;
 }

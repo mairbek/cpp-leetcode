@@ -1,6 +1,6 @@
 #include <iostream>
-#include <stack>
 #include <map>
+#include <stack>
 #include <vector>
 
 // https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
@@ -20,16 +20,15 @@ struct TreeNode {
 class Solution {
  public:
   std::vector<std::vector<int>> verticalTraversal(TreeNode* root) {
-
     std::stack<std::pair<TreeNode*, int>> st;
     TreeNode* current = root;
     int level = 0;
-    std::map<int, std::map<int>> vert;
+    std::map<int, std::vector<int>> vert;
     while (current != nullptr || !st.empty()) {
       if (current == nullptr) {
         auto top = st.top();
         st.pop();
-        vert[top.second].insert(top.first->val);
+        vert[top.second].push_back(top.first->val);
         current = top.first->right;
         level = ++top.second;
       } else {
@@ -69,7 +68,7 @@ void solve(TreeNode* node) {
   }
   std::cout << std::endl;
 }
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   // {
   //   TreeNode root(3, new TreeNode(1, nullptr, new TreeNode(2)),
   //                 new TreeNode(4));
@@ -83,7 +82,8 @@ int main(int argc, const char** argv) {
   //   solve(&root);
   // }
   {
-    TreeNode root(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
+    TreeNode root(3, new TreeNode(9),
+                  new TreeNode(20, new TreeNode(15), new TreeNode(7)));
 
     solve(&root);
   }

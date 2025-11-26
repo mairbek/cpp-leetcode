@@ -13,7 +13,7 @@ class Solution {
     }
     int m = matrix[0].size();
 
-    int dp[m + 1];
+    std::vector<int> dp(m + 1);
     for (int j = 0; j <= m; j++) {
       dp[j] = 0;
     }
@@ -42,7 +42,7 @@ class Solution {
     }
     int m = matrix[0].size();
 
-    int dp[n + 1][m + 1];
+    std::vector<std::vector<int>> dp(n + 1, std::vector<int>(m + 1));
     for (int i = 0; i <= n; i++) {
       dp[i][0] = 0;
     }
@@ -73,7 +73,7 @@ void solve(std::vector<std::vector<char>> s) {
   std::cout << result << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve(std::vector<std::vector<char>>{{'1', '0', '1', '0', '0'},
                                        {'1', '0', '1', '1', '1'},
                                        {'1', '1', '1', '1', '1'},

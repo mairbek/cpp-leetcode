@@ -40,7 +40,7 @@ void solve(std::vector<int> s, int k) {
   std::cout << "| " << k << " " << result << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve(std::vector<int>{1, 1, 1, 1}, 2);
   return 0;
 }

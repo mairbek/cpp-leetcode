@@ -1,6 +1,5 @@
 #include <algorithm>
 #include <iostream>
-#include <unordered_set>
 #include <vector>
 
 namespace {

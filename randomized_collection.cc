@@ -47,18 +47,20 @@ class RandomizedCollection {
 };
 }  // namespace
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   std::cout << "Hello, World" << std::endl;
 
   RandomizedCollection rc;
 
-//   std::cout << rc.insert(1) << rc.insert(1) << " " << rc.insert(2) << " " << rc.insert(1) << " "
-//             << rc.insert(2) << " " << rc.insert(10) << " " << rc.remove(1) << " " << rc.getRandom()
-//             << " " << std::endl;
+  //   std::cout << rc.insert(1) << rc.insert(1) << " " << rc.insert(2) << " "
+  //   << rc.insert(1) << " "
+  //             << rc.insert(2) << " " << rc.insert(10) << " " << rc.remove(1)
+  //             << " " << rc.getRandom()
+  //             << " " << std::endl;
 
-//    for (int i = 0; i < 10; i++) {
-//        std::cout << rc.getRandom() << std::endl;
-//    }
+  //    for (int i = 0; i < 10; i++) {
+  //        std::cout << rc.getRandom() << std::endl;
+  //    }
 
   rc.insert(1);
   rc.insert(1);

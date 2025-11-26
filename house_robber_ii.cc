@@ -1,19 +1,18 @@
 #include <algorithm>
 #include <iostream>
-#include <unordered_set>
 #include <vector>
 
 namespace {
 class Solution {
  public:
-  int rob(std::vector<int>& nums) { 
+  int rob(std::vector<int>& nums) {
     if (nums.size() == 0) {
       return 0;
     }
     if (nums.size() == 1) {
       return nums[0];
     }
-      return std::max(rob_dp(std::vector<int>(nums.begin(), nums.end() - 1)),
+    return std::max(rob_dp(std::vector<int>(nums.begin(), nums.end() - 1)),
                     rob_dp(std::vector<int>(nums.begin() + 1, nums.end())));
   }
 
@@ -35,7 +34,6 @@ class Solution {
     }
     return dp[nums.size() - 1];
   }
-  
 };
 }  // namespace
 

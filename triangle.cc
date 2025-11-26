@@ -41,7 +41,7 @@ void solve(std::vector<std::vector<int>> s) {
   std::cout << result << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve(std::vector<std::vector<int>>{{2}, {3, 4}, {6, 5, 7}, {4, 1, 8, 3}});
   return 0;
 }

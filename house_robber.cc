@@ -1,12 +1,11 @@
 #include <algorithm>
 #include <iostream>
-#include <unordered_set>
 #include <vector>
 
 namespace {
 class Solution {
  public:
-  int rob(std::vector<int>& nums) { 
+  int rob(std::vector<int>& nums) {
     int n = nums.size();
     std::vector<int> dp(n + 2, 0);
     for (int i = 0; i < n; i++) {

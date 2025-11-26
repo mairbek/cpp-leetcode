@@ -54,7 +54,7 @@ void solve(std::vector<std::vector<char>> s) {
   std::cout << result << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve(std::vector<std::vector<char>>{{'1', '0', '1', '0', '0'},
                                        {'1', '0', '1', '1', '1'},
                                        {'1', '1', '1', '1', '1'},

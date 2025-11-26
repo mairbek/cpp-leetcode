@@ -19,7 +19,7 @@ class Solution:
 
     def evaluate(self, expression: str) -> int:
         def check_int(s):
-            if s[0] in ('-', '+'):
+            if s[0] in ("-", "+"):
                 return s[1:].isdigit()
             return s.isdigit()
 
@@ -46,7 +46,7 @@ class Solution:
         frames.append(([], [], {}))
 
         for i in range(len(tokens)):
-            if tokens[i] == '(':
+            if tokens[i] == "(":
                 table = {}
                 if len(frames) > 0:
                     table = frames[-1][2]
@@ -57,7 +57,7 @@ class Solution:
             if tokens[i] in ["let", "add", "mult"]:
                 ops.append(tokens[i])
                 continue
-            if tokens[i] == ')':
+            if tokens[i] == ")":
                 op = None if len(ops) == 0 else ops[0]
                 if op == "let":
                     val = vals[-1]
@@ -93,14 +93,14 @@ class Solution:
                 append_val(frames[-1], val)
                 continue
             append_val(frames[-1], tokens[i])
-                
 
         return frames[0][0][0]
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     sol = Solution()
-    #print(sol.evaluate("(((2)))"))
-    #print(sol.evaluate("(add 1 2)")) # 3
-    #print(sol.evaluate("(let x 2 (mult x (let x 3 y 4 (add x y))))")) # 14
-    #print(sol.evaluate("(let x 3 x 2 x)")) # 2
-    print(sol.evaluate("(let x 1 y 2 x (add x y) (add x y))")) # 5
+    # print(sol.evaluate("(((2)))"))
+    # print(sol.evaluate("(add 1 2)")) # 3
+    # print(sol.evaluate("(let x 2 (mult x (let x 3 y 4 (add x y))))")) # 14
+    # print(sol.evaluate("(let x 3 x 2 x)")) # 2
+    print(sol.evaluate("(let x 1 y 2 x (add x y) (add x y))"))  # 5

@@ -17,7 +17,7 @@ class Solution {
 
   bool dp(std::string_view sv, std::vector<std::string>& words) {
     int n = sv.length();
-    bool dp[n + 1];
+    std::vector<bool> dp(n + 1);
     dp[0] = true;
     for (int i = 0; i < n; i++) {
       dp[i + 1] = false;
@@ -91,7 +91,7 @@ void solve(std::string s, std::vector<std::string> words) {
   std::cout << s << " | " << result << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve("leetcode", std::vector<std::string>{"leet", "code"});
   solve("applepenapple", std::vector<std::string>{"apple", "pen"});
   solve("catsandog",

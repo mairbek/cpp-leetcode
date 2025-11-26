@@ -1,5 +1,4 @@
 #include <algorithm>
-#include <climits>
 #include <iostream>
 #include <vector>
 
@@ -149,7 +148,7 @@ void solve(std::vector<int> a, std::vector<int> b, int k) {
   std::cout << "]" << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve(std::vector<int>{8, 6}, std::vector<int>{9, 1, 7}, 5);
   solve(std::vector<int>{1, 3}, std::vector<int>{2, 4}, 2);
   solve(std::vector<int>{3, 4, 6, 5}, std::vector<int>{9, 1, 2, 5, 8, 3}, 2);

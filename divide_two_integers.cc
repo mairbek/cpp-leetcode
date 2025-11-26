@@ -1,14 +1,9 @@
 #include <iostream>
-#include <string>
-#include <string_view>
-#include <unordered_map>
-#include <vector>
 
 namespace {
 // https://leetcode.com/problems/word-break/
 // DP O(N * M)
 class Solution {
- 
  public:
   int divide(int dividend, int divisor) {
     int sign = 1;
@@ -34,7 +29,6 @@ class Solution {
     }
     return result;
   }
-
 };
 }  // namespace
 
@@ -46,7 +40,7 @@ void solve(int dividend, int divisor) {
   std::cout << dividend << "/" << divisor << "=" << result << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve(10, 3);
   solve(7, -3);
   solve(0, 3);

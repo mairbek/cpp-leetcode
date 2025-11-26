@@ -1,25 +1,25 @@
 #include <iostream>
-#include <vector>
 #include <unordered_map>
+#include <vector>
 
 namespace {
 class Solution {
  public:
-    std::vector<int> twoSum(std::vector<int>& nums, int target) {
-        std::unordered_map<int, int> prev;
-        std::vector<int> result;
-        for (uint i = 0; i < nums.size(); i++) {
-            int k = target - nums[i];
-            auto it = prev.find(k);
-            if (it != prev.end()) {
-                result.push_back(it->second);
-                result.push_back(i);
-                break;
-            }
-            prev[nums[i]] = i;
-        }
-        return result;
+  std::vector<int> twoSum(std::vector<int>& nums, int target) {
+    std::unordered_map<int, int> prev;
+    std::vector<int> result;
+    for (uint i = 0; i < nums.size(); i++) {
+      int k = target - nums[i];
+      auto it = prev.find(k);
+      if (it != prev.end()) {
+        result.push_back(it->second);
+        result.push_back(i);
+        break;
+      }
+      prev[nums[i]] = i;
     }
+    return result;
+  }
 };
 }  // namespace
 
@@ -43,7 +43,7 @@ void solve(std::vector<int> nums, int target) {
   std::cout << "]" << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve(std::vector<int>{2, 7, 11, 15}, 9);
   solve(std::vector<int>{3, 2, 4}, 6);
   solve(std::vector<int>{3, 3}, 6);

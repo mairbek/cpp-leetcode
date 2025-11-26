@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 
 namespace {
 // https://leetcode.com/problems/climbing-stairs/
@@ -27,7 +26,7 @@ void solve(int n) {
   std::cout << result << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve(2);
   solve(3);
   solve(4);

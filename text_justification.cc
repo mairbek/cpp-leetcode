@@ -1,16 +1,12 @@
 #include <iostream>
 #include <string>
-#include <string_view>
-#include <unordered_map>
 #include <vector>
 
 namespace {
 // https://leetcode.com/problems/text-justification/
 class Solution {
  public:
-  int div(int x, int y) {
-    return x/y + (x % y != 0);
-  }
+  int div(int x, int y) { return x / y + (x % y != 0); }
   std::vector<std::string> fullJustify(std::vector<std::string>& words,
                                        int maxWidth) {
     std::vector<std::string> result;
@@ -101,6 +97,5 @@ int main(int argc, char const** argv) {
         20);
   return 0;
 }
-
 
 // 5

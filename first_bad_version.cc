@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 
 // https://leetcode.com/problems/first-bad-version/
 // simple binary search.
@@ -29,7 +28,7 @@ void solve(int n) {
 
   std::cout << n << " " << result << std::endl;
 }
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve(5);
   return 0;
 }

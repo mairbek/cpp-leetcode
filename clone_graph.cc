@@ -1,4 +1,3 @@
-#include <iostream>
 #include <unordered_map>
 #include <vector>
 
@@ -55,4 +54,4 @@ class Solution {
 };
 }  // namespace
 
-int main(int argc, const char** argv) { return 0; }
+int main(int argc, char const** argv) { return 0; }

@@ -1,6 +1,4 @@
 #include <iostream>
-#include <unordered_map>
-#include <vector>
 
 // https://leetcode.com/problems/integer-break/
 // DP, O(N) time O(N) memory
@@ -8,7 +6,7 @@ namespace {
 class Solution {
  public:
   int integerBreak(int n) {
-    int dp[n + 1];
+    std::vector<int> dp(n + 1);
     dp[0] = 1;
     dp[1] = 1;
     for (int i = 2; i <= n; i++) {
@@ -31,7 +29,7 @@ void solve(int n) {
   std::cout << n << " | " << result << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve(1);
   solve(3);
   solve(7);

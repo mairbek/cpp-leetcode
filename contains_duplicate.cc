@@ -1,7 +1,6 @@
 #include <iostream>
-#include <vector>
 #include <unordered_set>
-#include <algorithm>
+#include <vector>
 
 namespace {
 class Solution {
@@ -10,7 +9,7 @@ class Solution {
     std::unordered_set<int> visited;
     for (uint i = 0; i < nums.size(); i++) {
       if (visited.count(nums[i]) > 0) {
-          return true;
+        return true;
       }
       visited.insert(nums[i]);
     }
@@ -32,7 +31,7 @@ void solve(std::vector<int> prices) {
   std::cout << "] " << result << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve(std::vector<int>{1, 2, 3, 1});
   solve(std::vector<int>{1, 2, 3, 4});
   solve(std::vector<int>{1, 1, 1, 3, 3, 4, 3, 2, 4, 2});

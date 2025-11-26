@@ -1,5 +1,4 @@
 #include <iostream>
-#include <unordered_map>
 #include <vector>
 
 namespace {
@@ -57,7 +56,7 @@ class Solution {
           }
         }
       } else if (token == "+" || token == "-" || token == "*" || token == "/") {
-       while (!ops.empty()) {
+        while (!ops.empty()) {
           std::string top = ops.back();
           if (precedence(top) < precedence(token)) {
             break;
@@ -122,7 +121,7 @@ void solve(std::string s) {
   std::cout << s << " | " << result << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve("1+1");
   solve("(1+1)*2");
   solve("(1)");

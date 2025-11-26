@@ -1,7 +1,6 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <unordered_map>
-#include <algorithm>
 
 namespace {
 class Solution {
@@ -10,8 +9,8 @@ class Solution {
     std::vector<int> dp;
     dp.push_back(nums[0]);
     for (uint i = 1; i < nums.size(); i++) {
-        int s = std::max(dp[i-1] + nums[i], nums[i]);
-        dp.push_back(s);
+      int s = std::max(dp[i - 1] + nums[i], nums[i]);
+      dp.push_back(s);
     }
     return *std::max_element(dp.begin(), dp.end());
   }
@@ -31,7 +30,7 @@ void solve(std::vector<int> nums) {
   std::cout << "] " << result << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve(std::vector<int>{-2, 1, -3, 4, -1, 2, 1, -5, 4});
   solve(std::vector<int>{1});
   solve(std::vector<int>{5, 4, -1, 7, 8});

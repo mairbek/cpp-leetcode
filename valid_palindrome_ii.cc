@@ -1,6 +1,4 @@
 #include <iostream>
-#include <unordered_map>
-#include <vector>
 
 namespace {
 
@@ -35,7 +33,7 @@ void solve(std::string s) {
   std::cout << s << " | " << result << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve("aba");
   solve("cbbb");
   solve("abbca");

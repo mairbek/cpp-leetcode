@@ -8,7 +8,7 @@ class Solution {
  public:
   int coinChange(std::vector<int>& coins, int amount) {
     if (amount == 0) return 0;
-    int dp[amount + 1];
+    std::vector<int> dp(amount + 1);
     dp[0] = 0;
 
     for (int i = 1; i <= amount; i++) {
@@ -44,7 +44,7 @@ void solve(std::vector<int> v, int n) {
   std::cout << result << std::endl;
 }
 
-int main(int argc, const char** argv) {
+int main(int argc, char const** argv) {
   solve(std::vector<int>{474, 83, 404, 3}, 264);
   return 0;
 }
