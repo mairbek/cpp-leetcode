@@ -375,3 +375,8 @@ cc_binary(
     name = "paths_in_matrix_whose_sum_is_divisible_by_k",
     srcs = ["paths_in_matrix_whose_sum_is_divisible_by_k.cc"]
 )
+
+cc_binary(
+    name = "maximum_performance_of_a_team",
+    srcs = ["maximum_performance_of_a_team.cc"]
+)
