@@ -1,8 +1,4 @@
-	bazel-bin
-	bazel-cpp-start
-	bazel-genfiles
-	bazel-out
-	bazel-testlogs
+bazel-cpp-start
 bazel-bin
 bazel-cpp-leetcode
 bazel-genfiles
