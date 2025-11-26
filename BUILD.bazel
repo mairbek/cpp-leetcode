@@ -368,3 +368,10 @@ cc_binary(
     name = "russian_doll_envelopes",
     srcs = ["russian_doll_envelopes.cc"]
 )
+
+# paths-in-matrix-whose-sum-is-divisible-by-k
+
+cc_binary(
+    name = "paths_in_matrix_whose_sum_is_divisible_by_k",
+    srcs = ["paths_in_matrix_whose_sum_is_divisible_by_k.cc"]
+)
