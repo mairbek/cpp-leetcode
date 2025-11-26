@@ -9,3 +9,6 @@ bazel-genfiles
 bazel-out
 bazel-testlogs
 .vscode
+
+# Direnv
+.direnv
