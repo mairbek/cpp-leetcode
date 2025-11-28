@@ -386,3 +386,7 @@ cc_binary(
     name = "median_of_two_sorted_arrays",
     srcs = ["median_of_two_sorted_arrays.cc"]
 )
+cc_binary(
+    name = "kth_smallest_element_in_a_sorted_matrix",
+    srcs = ["kth_smallest_element_in_a_sorted_matrix.cc"]
+)
