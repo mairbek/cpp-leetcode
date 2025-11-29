@@ -9,3 +9,8 @@ cc_binary(
     name = "1374C_move_brackets",
     srcs = ["1374C_move_brackets.cc"],
 )
+
+cc_binary(
+    name = "2158A_suspension",
+    srcs = ["2158A_suspension.cc"],
+)
