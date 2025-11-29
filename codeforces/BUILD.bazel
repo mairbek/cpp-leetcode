@@ -4,3 +4,8 @@ cc_binary(
     name = "977B_two_gram",
     srcs = ["977B_two_gram.cc"],
 )
+
+cc_binary(
+    name = "1374C_move_brackets",
+    srcs = ["1374C_move_brackets.cc"],
+)
