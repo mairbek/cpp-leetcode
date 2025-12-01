@@ -14,3 +14,8 @@ cc_binary(
     name = "2158A_suspension",
     srcs = ["2158A_suspension.cc"],
 )
+
+cc_binary(
+    name = "2158B_split",
+    srcs = ["2158B_split.cc"],
+)
