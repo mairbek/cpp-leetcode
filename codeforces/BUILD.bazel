@@ -19,3 +19,8 @@ cc_binary(
     name = "2158B_split",
     srcs = ["2158B_split.cc"],
 )
+
+cc_binary(
+    name = "2175A_little_fairys_painting",
+    srcs = ["2175A_little_fairys_painting.cc"],
+)
