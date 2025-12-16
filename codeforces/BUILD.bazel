@@ -11,6 +11,11 @@ cc_binary(
 )
 
 cc_binary(
+    name = "1705B_mark_the_dust_sweeper",
+    srcs = ["1705B_mark_the_dust_sweeper.cc"],
+)
+
+cc_binary(
     name = "2158A_suspension",
     srcs = ["2158A_suspension.cc"],
 )
