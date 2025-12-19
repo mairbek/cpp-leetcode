@@ -29,3 +29,8 @@ cc_binary(
     name = "2175A_little_fairys_painting",
     srcs = ["2175A_little_fairys_painting.cc"],
 )
+
+cc_binary(
+    name = "1747C_swap_game",
+    srcs = ["1747C_swap_game.cc"],
+)
