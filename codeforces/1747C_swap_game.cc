@@ -8,7 +8,7 @@ bool solve(std::vector<int> const& a) {
       min = a[i];
     }
   }
-  return (a[0] - min) > 0;
+  return a[0] > min;
 }
 
 int main() {
