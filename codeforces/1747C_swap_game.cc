@@ -1,13 +1,14 @@
 #include <iostream>
+#include <vector>
 
 bool solve(std::vector<int> const& a) {
-  int max = 0;
+  int min = 0;
   for (int i = 1; i < a.size(); i++) {
-    if (max == 0 || max < a[i]) {
-      max = a[i];
+    if (min == 0 || min > a[i]) {
+      min = a[i];
     }
   }
-  return (a[0] - max) > 0 && (a[0] - max) <= 2;
+  return (a[0] - min) > 0;
 }
 
 int main() {
