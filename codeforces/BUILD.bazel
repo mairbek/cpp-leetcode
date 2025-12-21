@@ -34,3 +34,9 @@ cc_binary(
     name = "1747C_swap_game",
     srcs = ["1747C_swap_game.cc"],
 )
+
+
+cc_binary(
+    name = "1903A_halloumi_boxes",
+    srcs = ["1903A_halloumi_boxes.cc"],
+)
