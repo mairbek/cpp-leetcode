@@ -55,3 +55,8 @@ cc_binary(
     name = "1899A_game_with_integers",
     srcs = ["1899A_game_with_integers.cc"],
 )
+
+cc_binary(
+    name = "1913B_swap_and_delete",
+    srcs = ["1913B_swap_and_delete.cc"],
+)
