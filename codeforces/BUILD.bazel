@@ -50,3 +50,8 @@ cc_binary(
     name = "1900A_cover_in_water",
     srcs = ["1900A_cover_in_water.cc"],
 )
+
+cc_binary(
+    name = "1899A_game_with_integers",
+    srcs = ["1899A_game_with_integers.cc"],
+)

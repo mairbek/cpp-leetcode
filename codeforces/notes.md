@@ -10,3 +10,7 @@ Key insight: track max distance between two points. Make sure to track last roun
 
 ## 1900A Cover in Water
 Key insight: find 3 consecutive dots. If found, we can fill them out with 2 moves and then reuse middle one to fill out other dots. Return 2. Otherwise return number of dots.
+
+## 1899A Game with Integers
+1899A_game_with_integers
+Key insight: if n-1%3 or n+1%3 == 0, first player wins.
