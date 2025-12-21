@@ -7,3 +7,6 @@ Key insight: reversing the subarray with two elements is enough to sort the arra
 
 ## 1901A Line Trip
 Key insight: track max distance between two points. Make sure to track last round trip.
+
+## 1900A Cover in Water
+Key insight: find 3 consecutive dots. If found, we can fill them out with 2 moves and then reuse middle one to fill out other dots. Return 2. Otherwise return number of dots.

@@ -45,3 +45,8 @@ cc_binary(
     name = "1901A_line_trip",
     srcs = ["1901A_line_trip.cc"],
 )
+
+cc_binary(
+    name = "1900A_cover_in_water",
+    srcs = ["1900A_cover_in_water.cc"],
+)
