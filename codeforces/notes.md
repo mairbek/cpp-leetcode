@@ -16,5 +16,7 @@ Key insight: if n-1%3 or n+1%3 == 0, first player wins.
 
 # 1000
 ## 1913B Swap and Delete
-1913B_swap_and_delete
 Key insight: count 1s and 0s. Then run a second pass to find first index when we cannot swap 0 and 1. Result is n - index.
+
+## 1883C Raspberries
+Key insight: 2 <= k <= 5. If k=2,3,5 just find minimum way to get one element divide by k. if k = 4, it depends on number of odd and even elements.

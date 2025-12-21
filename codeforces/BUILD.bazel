@@ -60,3 +60,8 @@ cc_binary(
     name = "1913B_swap_and_delete",
     srcs = ["1913B_swap_and_delete.cc"],
 )
+
+cc_binary(
+    name = "1883C_raspberries",
+    srcs = ["1883C_raspberries.cc"],
+)
