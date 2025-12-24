@@ -65,3 +65,18 @@ cc_binary(
     name = "1883C_raspberries",
     srcs = ["1883C_raspberries.cc"],
 )
+
+cc_binary(
+    name = "2179A",
+    srcs = ["2179A.cc"],
+)
+
+cc_binary(
+    name = "2179B",
+    srcs = ["2179B.cc"],
+)
+
+cc_binary(
+    name = "2179C",
+    srcs = ["2179C.cc"],
+)
