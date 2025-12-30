@@ -80,3 +80,7 @@ cc_binary(
     name = "2179C",
     srcs = ["2179C.cc"],
 )
+cc_binary(
+    name = "1917B_erase_first_or_second_letter",
+    srcs = ["1917B_erase_first_or_second_letter.cc"],
+)
