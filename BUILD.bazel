@@ -395,3 +395,8 @@ cc_binary(
     name = "count_caesar_cipher_pairs",
     srcs = ["count_caesar_cipher_pairs.cc"]
 )
+
+cc_binary(
+    name = "number_of_centered_subarrays",
+    srcs = ["number_of_centered_subarrays.cc"]
+)
