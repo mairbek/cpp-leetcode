@@ -400,3 +400,8 @@ cc_binary(
     name = "number_of_centered_subarrays",
     srcs = ["number_of_centered_subarrays.cc"]
 )
+
+cc_binary(
+    name = "find_nth_smallest_integer_with_k_one_bits",
+    srcs = ["find_nth_smallest_integer_with_k_one_bits.cc"]
+)
