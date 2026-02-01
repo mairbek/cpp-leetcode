@@ -405,3 +405,8 @@ cc_binary(
     name = "find_nth_smallest_integer_with_k_one_bits",
     srcs = ["find_nth_smallest_integer_with_k_one_bits.cc"]
 )
+
+cc_binary(
+    name = "path_sum_iii",
+    srcs = ["path_sum_iii.cc"],
+)
