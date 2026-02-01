@@ -415,3 +415,8 @@ cc_binary(
     name = "task_scheduler",
     srcs = ["task_scheduler.cc"],
 )
+
+cc_binary(
+    name = "reorganize_string",
+    srcs = ["reorganize_string.cc"],
+)
