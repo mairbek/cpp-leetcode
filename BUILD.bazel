@@ -410,3 +410,8 @@ cc_binary(
     name = "path_sum_iii",
     srcs = ["path_sum_iii.cc"],
 )
+
+cc_binary(
+    name = "task_scheduler",
+    srcs = ["task_scheduler.cc"],
+)
