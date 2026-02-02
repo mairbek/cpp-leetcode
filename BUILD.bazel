@@ -420,3 +420,8 @@ cc_binary(
     name = "reorganize_string",
     srcs = ["reorganize_string.cc"],
 )
+
+cc_binary(
+    name = "minimum_number_of_frogs_croaking",
+    srcs = ["minimum_number_of_frogs_croaking.cc"],
+)
