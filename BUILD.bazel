@@ -425,3 +425,8 @@ cc_binary(
     name = "minimum_number_of_frogs_croaking",
     srcs = ["minimum_number_of_frogs_croaking.cc"],
 )
+
+cc_binary(
+    name = "design_browser_history",
+    srcs = ["design_browser_history.cc"],
+)
